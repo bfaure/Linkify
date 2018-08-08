@@ -1,0 +1,38 @@
+{
+  "name": "Linkify",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+
+  "web_accessible_resources": [ "options.html","js/popup.js","icons/icon128.png"],
+
+  "description": "Display link importance across the web.",
+
+  "homepage_url": "http://bfaure.us",
+  
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+
+  "default_locale": "en",
+
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": true
+  },
+
+  "options_page": "options/options.html",
+
+  "browser_action": {
+    "default_icon": "icons/icon128.png"
+  },
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "permissions": [
+    "activeTab",
+    "background",
+    "tabs",
+    "<all_urls>",
+    "storage"
+  ]
+}
