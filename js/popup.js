@@ -34,6 +34,17 @@ function processUrl(url)
     let results=getHttpXml(built_url);
     console.log(results);
 
+	var text = document.body.innerHTML; // get all inner html on page
+	var links = text.split("<a"); // split on " "
+	var new_text = ""; // to hold wrapped links
+
+    for(let i=0; i<links.length; i+=1){
+        console.log(links[i]);
+    }
+
+
+	//document.body.innerHTML = new_text;
+
 }
 
 // Call getCurrentUrl function with the processUrl function being called
