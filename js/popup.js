@@ -65,7 +65,7 @@ function processUrl(url)
 		}
 		let cur_url=cur.slice(start_idx,end_idx);
 		let count=get_link_count(cur_url);
-		new_html+="<a title=\"Linked to by "+count+" pages\" "+cur;
+		new_html+="<a title=\"Linked to by "+parseInt(count).toLocaleString()+" pages\" "+cur;
     }
 	document.body.innerHTML = new_html;
 }
